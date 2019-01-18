@@ -373,3 +373,88 @@ func (gmo *GMO) SearchTradeMulti(orderID string, typ PayType) (output SearchTrad
 	err = gmo.HandleShopRequest("/payment/SearchTradeMulti.idPass", params, &output)
 	return
 }
+
+type ExecTranDocomoOutput struct {
+	AccessID       string
+	Token          string
+	StartURL       string
+	StartLimitDate string
+	ErrCode        string
+	ErrInfo        string
+}
+
+type DocomoStartOutput struct {
+	ShopID               string
+	OrderID              string
+	Status               string
+	TranDate             string
+	DocomoSettlementCode string
+	ErrCode              string
+	ErrInfo              string
+}
+
+type DocomoSalesOutput struct {
+	OrderID string
+	Status  string
+	Amount  string
+	Tax     string
+	ErrCode string
+	ErrInfo string
+}
+
+type ExecTranSoftbankOutput struct {
+	AccessID       string
+	Token          string
+	StartURL       string
+	StartLimitDate string
+	ErrCode        string
+	ErrInfo        string
+}
+
+type SoftbankStartOutput struct {
+	ShopID       string
+	OrderID      string
+	Status       string
+	TranDate     string
+	SbTrackingId string
+	ErrCode      string
+	ErrInfo      string
+}
+
+type SoftbankSalesOutput struct {
+	OrderID string
+	Status  string
+	Amount  string
+	Tax     string
+	ErrCode string
+	ErrInfo string
+}
+
+type ExecTranAuOutput struct {
+	AccessID       string
+	Token          string
+	StartURL       string
+	StartLimitDate string
+	ErrCode        string
+	ErrInfo        string
+}
+
+type AuStartOutput struct {
+	ShopID    string
+	OrderID   string
+	Status    string
+	TranDate  string
+	PayInfoNo string
+	PayMethod string
+	ErrCode   string
+	ErrInfo   string
+}
+
+type AuSalesOutput struct {
+	OrderID string
+	Status  string
+	Amount  string
+	Tax     string
+	ErrCode string
+	ErrInfo string
+}
